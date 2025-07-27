@@ -1,0 +1,1 @@
+Esta tarea no contemplaba la aplicación de un algoritmo.

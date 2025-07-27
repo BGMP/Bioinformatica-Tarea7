@@ -1,0 +1,294 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tikz}
+\renewcommand{\baselinestretch}{0.95}
+\title{\textbf{Tarea 4: Predicción de Estructuras Biológicas}}
+\author{José Benavente, Héctor Ayala}
+\date{}
+\begin{document}
+  
+  \maketitle
+  
+  \section*{1. Predicciones de Estructura en el Área Biológica}
+  
+  \noindent La predicción de estructuras es fundamental en biología para entender la función de diversas macromoléculas. Existen varios tipos de predicciones de estructura biológica:
+  
+  \begin{enumerate}
+    [noitemsep,topsep=0pt,leftmargin=*]
+    \item \textbf{Predicción de estructura de proteínas}: Determina la conformación tridimensional de una proteína a partir de su secuencia de aminoácidos. %Es crucial para entender funciones biológicas, diseño de fármacos e investigación de enfermedades.
+    
+    \item \textbf{Predicción de estructura de ARN}: Identifica la conformación tridimensional de moléculas de ARN, que juegan roles críticos en la regulación génica y procesos celulares.
+    
+    \item \textbf{Predicción de estructura de ADN}: Modela la estructura tridimensional del ADN, incluyendo conformaciones no canónicas como cuádruplex-G o estructuras cruciformes.
+    
+    \item \textbf{Predicción de interacciones proteína-proteína}: Determina cómo interactúan diferentes proteínas entre sí.%, formando complejos funcionales \cite{HADDOCK}.
+    
+    \item \textbf{Predicción de estructura de complejos macromoleculares}: Predice la estructura de grandes ensamblajes de proteínas, ácidos nucleicos y otras biomoléculas.% \cite{AF-Multimer}.
+  \end{enumerate}
+  
+  %\noindent \textbf{Fuentes}:
+  %\begin{itemize}[noitemsep,topsep=0pt]
+  %\item AlphaFold: \url{https://www.deepmind.com/research/highlighted-research/alphafold}
+  %\item RNAfold: \url{https://www.tbi.univie.ac.at/RNA/}
+  %\item HADDOCK: \url{https://wenmr.science.uu.nl/haddock2.4/}
+  %\item EMBL-EBI - Structural Biology: \url{https://www.ebi.ac.uk/training/online/courses/structural-bioinformatics-i/}
+  %\item Nature Methods - Computational Structural Biology: \url{https://www.nature.com/collections/aihfgehjdg}
+  %\end{itemize}
+  
+  \section*{2. Aplicaciones para Predicción de Estructura y sus Lenguajes}
+  
+  \begin{enumerate}[noitemsep,topsep=0pt,leftmargin=*]
+    \item \textbf{\href{https://github.com/deepmind/alphafold}{AlphaFold2}} (DeepMind)
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item \textit{Lenguaje}: Python, JAX
+      \item \textit{Descripción}: Sistema de IA para predecir estructuras de proteínas con precisión atómica
+    \end{itemize}
+    
+    \item \textbf{\href{https://github.com/RosettaCommons/RoseTTAFold}{RoseTTAFold}} (Baker Lab)
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item \textit{Lenguaje}: Python, PyTorch
+      \item \textit{Descripción}: Método de aprendizaje profundo para predicción rápida y precisa de estructuras proteicas
+      %\item \textit{URL}: \url{https://github.com/RosettaCommons/RoseTTAFold}
+    \end{itemize}
+    
+    \item \textbf{\href{https://zhanggroup.org/I-TASSER/}{I-TASSER}} (Universidad de Michigan)
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item \textit{Lenguaje}: C++, Python
+      \item \textit{Descripción}: Plataforma jerárquica para predicción de estructura y función de proteínas
+      %\item \textit{URL}: \url{https://zhanggroup.org/I-TASSER/}
+    \end{itemize}
+    
+    \item \textbf{\href{http://www.sbg.bio.ic.ac.uk/phyre2/}{Phyre2}} (Imperial College London)
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item \textit{Lenguaje}: C++, JavaScript
+      \item \textit{Descripción}: Servidor web para predicción y análisis de estructuras proteicas
+      %\item \textit{URL}: \url{http://www.sbg.bio.ic.ac.uk/phyre2/}
+    \end{itemize}
+    
+    \item \textbf{\href{https://swissmodel.expasy.org/}{SWISS-MODEL}} (SIB Swiss Institute of Bioinformatics)
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item \textit{Lenguaje}: Python, C++
+      \item \textit{Descripción}: Servicio automatizado de modelado por homología de estructuras proteicas
+      %\item \textit{URL}: \url{https://swissmodel.expasy.org/}
+    \end{itemize}
+    
+    \item \textbf{\href{https://github.com/facebookresearch/esm}{ESMFold}} (Meta AI)
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item \textit{Lenguaje}: Python, PyTorch
+      \item \textit{Descripción}: Modelo de predicción de estructura basado en transformers pre-entrenados
+      %\item \textit{URL}: \url{https://github.com/facebookresearch/esm}
+    \end{itemize}
+    
+    \item \textbf{\href{https://salilab.org/modeller/}{MODELLER}} (UCSF)
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item \textit{Lenguaje}: Python, Fortran
+      \item \textit{Descripción}: Software para modelado comparativo de estructuras 3D de proteínas
+      %\item \textit{URL}: \url{https://salilab.org/modeller/}
+    \end{itemize}
+    
+    \item \textbf{\href{https://github.com/gjoni/trRosetta}{trRosetta}} (Universidad de Washington)
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item \textit{Lenguaje}: Python, TensorFlow
+      \item \textit{Descripción}: Método basado en redes neuronales para predicción de estructura protéica
+      %\item \textit{URL}: \url{https://github.com/gjoni/trRosetta}
+    \end{itemize}
+    
+    \item \textbf{\href{https://github.com/sokrypton/ColabFold}{ColabFold}} (Steinegger Lab)
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item \textit{Lenguaje}: Python
+      \item \textit{Descripción}: Implementación accesible de AlphaFold2 y RoseTTAFold en Google Colab
+      %\item \textit{URL}: \url{https://github.com/sokrypton/ColabFold}
+    \end{itemize}
+    
+    \item \textbf{\href{https://github.com/aqlaboratory/openfold}{OpenFold}} (Columbia University)
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item \textit{Lenguaje}: Python, PyTorch
+      \item \textit{Descripción}: Reimplementación de código abierto de AlphaFold2
+      %\item \textit{URL}: \url{https://github.com/aqlaboratory/openfold}
+    \end{itemize}
+  \end{enumerate}
+  
+  \section*{3. DeepMind y su Relación con la Predicción de Estructuras}
+  
+  \noindent DeepMind es una compañía de investigación en inteligencia artificial fundada en 2010 y adquirida por Google en 2014.
+  
+  \begin{itemize}[noitemsep,topsep=0pt,leftmargin=*]
+    \item \textbf{Enfoque general de DeepMind}:
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item Desarrolla sistemas de IA que pueden aprender a resolver problemas complejos sin instrucciones específicas.
+      \item Utiliza técnicas de aprendizaje profundo y redes neuronales.
+      \item Ha logrado avances significativos en diversos campos como juegos (AlphaGo, AlphaStar), ciencia climática (nowcasting de precipitaciones), matemáticas y biología estructural.
+    \end{itemize}
+    
+    \item \textbf{DeepMind y la predicción de estructuras}:
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item En 2018, participó en el CASP13 (Critical Assessment of protein Structure Prediction) con AlphaFold1, superando significativamente a otros métodos.
+      \item En 2020, presentó AlphaFold2 en el CASP14, alcanzando gran precisión en la predicción de estructuras proteicas, considerado un avance revolucionario.
+      \item En 2021, publicó la base de datos AlphaFold Protein Structure Database en colaboración con EMBL-EBI, proporcionando acceso gratuito a predicciones estructurales de casi todas las proteínas conocidas.
+      \item En 2022, expandió sus capacidades con AlphaFold-Multimer para predecir complejos proteicos.
+      \item En 2023-2024, ha continuado mejorando sus modelos para predecir interacciones proteína-ADN y otros complejos biomoleculares.
+    \end{itemize}
+  \end{itemize}
+  %\item \textbf{Impacto científico}:
+  %\begin{itemize}[noitemsep,topsep=0pt]
+  %\item Ha acelerado la investigación en biología estructural, reduciendo procesos que tomaban años a días o incluso horas.
+  %\item Ha facilitado avances en el desarrollo de fármacos, comprensión de enfermedades y biología básica.
+  %\item Ha democratizado el acceso a información estructural de proteínas, permitiendo a laboratorios pequeños realizar investigaciones que antes requerían equipamiento costoso.
+  %\end{itemize}
+  %\end{itemize}
+  
+  \section*{4. Diferencia entre Modelar y Predecir Estructuras}
+  
+  \begin{itemize}[noitemsep,topsep=0pt,leftmargin=*]
+    \item \textbf{Modelado de estructuras}:
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item Se basa en información estructural existente (estructuras experimentales conocidas).
+      \item Utiliza principalmente técnicas de modelado por homología/comparativo.
+      \item Requiere proteínas ``plantillas'' con estructuras resueltas experimentalmente y similitud de secuencia.
+      \item Más confiable cuando existe alta similitud con estructuras conocidas.
+      \item Ejemplos: SWISS-MODEL, MODELLER, metodologías tradicionales que dependen de alineamientos y plantillas.
+      \item Limitación: menos efectivo para proteínas sin homólogos estructurales conocidos.
+    \end{itemize}
+    
+    \item \textbf{Predicción de estructuras}:
+    \begin{itemize}[noitemsep,topsep=0pt]
+      \item Determina la estructura tridimensional directamente a partir de la secuencia primaria.
+      \item Utiliza métodos \textit{ab initio} o \textit{de novo} que no dependen exclusivamente de plantillas.
+      \item Emplea principios físicos, estadísticos y/o de aprendizaje profundo.
+      \item Puede predecir estructuras incluso para proteínas sin homólogos estructurales conocidos.
+      \item Ejemplos: AlphaFold2, RoseTTAFold, métodos más recientes basados en aprendizaje profundo.
+      \item Los modelos actuales combinan información evolutiva, aprendizaje profundo y principios físico-químicos.
+    \end{itemize}
+  \end{itemize}
+  \section*{5. Cuadro Comparativo de Aplicaciones de Predicción de Estructura}
+  
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{|p{4cm}|p{3cm}|p{4cm}|p{4cm}|}
+      \hline
+      \textbf{Apps} & \textbf{Lenguaje} & \textbf{Uso (descarga/online)} & \textbf{Tamaño de estructura que soporta} \\
+      \hline
+      \textbf{Rosetta} & C++, Python & Descarga (licencia académica gratuita) & Hasta 10.000 residuos en protocolos rígidos; óptimo $\leq$ 500 residuos en plegamiento ab initio \\
+      \hline
+      \textbf{MODELLER} & Python, Fortran & Descarga (gratuito para académicos) & Hasta 3,000 residuos por cadena; ideal $\leq$ 1.000 \\
+      \hline
+      \textbf{I-TASSER} & C++, Python & Online y descarga (versión ligera) & Hasta 1.500 residuos (web); hasta 5.000 local \\
+      \hline
+      \textbf{Phyre2} & C++, JavaScript & Principalmente online & Hasta $\sim$1.000 residuos \\
+      \hline
+      \textbf{Swiss-Model} & Python, C++ & Online & Hasta $\sim$2.000 residuos por cadena; $>$3.000 total posible \\
+      \hline
+      \textbf{RoseTTAFold} & Python, PyTorch & Online y descarga (GitHub) & Hasta 1.400 residuos (limitado por memoria GPU) \\
+      \hline
+      \textbf{trRosetta} & Python, TensorFlow & Online y descarga (GitHub) & Hasta $\sim$1.000 residuos \\
+      \hline
+      \textbf{OpenFold} & Python, PyTorch & Descarga (GitHub) & Hasta $\sim$3.000 residuos (depende del hardware) \\
+      \hline
+      \textbf{OmegaFold} & Python, JAX & Descarga (GitHub) & Hasta 2.000--2.500 residuos (GPU moderna) \\
+      \hline
+      \textbf{ESMFold} & Python, PyTorch & Online y descarga (GitHub) & Hasta $\sim$1.400 residuos \\
+      \hline
+      \textbf{AlphaFold-Multimer} & Python, JAX & Descarga (GitHub), Colab & Hasta poco más de 3.000 residuos totales; ideal $\leq$ 5 cadenas grandes o 8 medianas \\
+      \hline
+      \textbf{RaptorX} & Python, PyTorch & Descarga (GitHub) & Hasta $\sim$1.200 residuos \\
+      \hline
+    \end{tabular}
+    \caption{Comparativa de aplicaciones de predicción de estructura proteica}
+    \label{tab:comparativa_apps}
+  \end{table}
+  
+  \section*{6. Vertex Cover}
+  
+  \noindent Un Vertex Cover (cobertura de vértices) es un concepto fundamental en teoría de grafos que consiste en un conjunto de vértices tal que cada arista del grafo incide en al menos uno de los vértices de dicho conjunto. En otras palabras, es un subconjunto de vértices que ''cubre'' todas las aristas del grafo.
+  
+  \noindent El problema de encontrar el Vertex Cover mínimo (con el menor número posible de vértices) es un problema NP-completo clásico en ciencias de la computación, con aplicaciones en la biología computacional.
+  
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=1.2]
+      % Definición de estilos
+      \tikzstyle{normal}=[circle, draw, fill=white, minimum size=8pt, inner sep=2pt]
+      \tikzstyle{cover}=[circle, draw, fill=gray!40, minimum size=8pt, inner sep=2pt]
+      
+      % Grafo original
+      \begin{scope}[xshift=-3cm]
+        % Vértices
+        \node[normal] (A) at (0,2) {A};
+        \node[normal] (B) at (2,2) {B};
+        \node[normal] (C) at (0,0) {C};
+        \node[normal] (D) at (2,0) {D};
+        \node[normal] (E) at (3,1) {E};
+        
+        % Aristas
+        \draw (A) -- (B);
+        \draw (A) -- (C);
+        \draw (B) -- (D);
+        \draw (C) -- (D);
+        \draw (B) -- (E);
+        \draw (D) -- (E);
+        
+        \node at (1.5,-1) {Grafo original};
+      \end{scope}
+      
+      % Vertex cover
+      \begin{scope}[xshift=3cm]
+        % Vértices
+        \node[cover] (A2) at (0,2) {A};
+        \node[normal] (B2) at (2,2) {B};
+        \node[normal] (C2) at (0,0) {C};
+        \node[cover] (D2) at (2,0) {D};
+        \node[cover] (E2) at (3,1) {E};
+        
+        % Aristas
+        \draw (A2) -- (B2);
+        \draw (A2) -- (C2);
+        \draw (B2) -- (D2);
+        \draw (C2) -- (D2);
+        \draw (B2) -- (E2);
+        \draw (D2) -- (E2);
+        
+        \node at (1.5,-1) {Vertex Cover \{A, D, E\}; V = 3};
+      \end{scope}
+    \end{tikzpicture}
+    \caption{Ejemplo de un Vertex Cover mínimo en un grafo simple. Los vértices sombreados (A, D, E) forman un conjunto que cubre todas las aristas del grafo.}
+    \label{fig:vertex_cover}
+  \end{figure}
+  
+  \noindent En el ejemplo, el conjunto \{A, D, E\} representa un Vertex Cover mínimo porque:
+  \begin{itemize}[noitemsep]
+    \item Cada arista del grafo está conectada a al menos uno de estos vértices
+    \item No existe un conjunto con menos de 3 vértices que cubra todas las aristas
+    \item El vértice A cubre las aristas (A,B) y (A,C)
+    \item El vértice D cubre las aristas (B,D), (C,D) y (D,E)
+    \item El vértice E cubre la arista (B,E)
+  \end{itemize}
+  
+  \noindent La búsqueda de Vertex Cover mínimos se utiliza en aplicaciones bioinformáticas como el diseño de experimentos para interacciones proteína-proteína, validación de redes de interacción molecular, y problemas de ensamblaje de fragmentos en secuenciación de ADN/ARN.
+  
+  \section*{7. Aplicaciones que Implementan el Algoritmo Vertex Cover}
+  
+  \noindent Existen diversas herramientas y bibliotecas que implementan el algoritmo de Vertex Cover para diferentes aplicaciones:
+  
+  \begin{itemize}[noitemsep,topsep=0pt,leftmargin=*]    
+    \item \textbf{\href{https://lemon.cs.elte.hu/trac/lemon}{Library for Efficient Modeling and Optimization in Networks (LEMON)}}: Biblioteca de C++ que proporciona implementaciones eficientes para problemas de optimización en grafos, incluyendo Vertex Cover.\\
+    %\url{https://lemon.cs.elte.hu/trac/lemon}
+    
+    \item \textbf{\href{https://ogdf.uos.de/}{Open Graph Drawing Framework (OGDF)}}: Biblioteca de C++ con algoritmos de grafos que incluye optimizaciones para Vertex Cover.\\
+    %\url{https://ogdf.uos.de/}
+    
+    \item \textbf{\href{https://graph-tool.skewed.de/}{Graph-tool}}: Biblioteca de Python/C++ para análisis y manipulación eficiente de grafos con algoritmos para problemas NP-completos.\\
+    %\url{https://graph-tool.skewed.de/}
+    
+    \item \textbf{\href{https://cytoscape.org/}{Cytoscape}}: Software para visualización y análisis de redes biomoleculares que incluye plugins para encontrar Vertex Covers en redes biológicas.\\
+    %\url{https://cytoscape.org/}
+  \end{itemize}
+  
+  \noindent Estas herramientas son ampliamente utilizadas en investigación bioinformática para analizar redes de interacción proteína-proteína, identificar objetivos de fármacos y estudiar rutas metabólicas críticas.
+\end{document}
